@@ -30,6 +30,7 @@ module KnightsTravails
           visited << pos
         end
       end
+      nil
     end
 
     def out_of_bounds?(coord)

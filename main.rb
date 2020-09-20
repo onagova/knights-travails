@@ -4,6 +4,13 @@ $board = KnightsTravails::Board.new(8, 8)
 
 def knight_moves(start, dest)
   path = $board.knight_moves(start, dest)
+
+  if path.nil?
+    puts "=> Cannot reach #{dest} from #{start}"
+    puts ''
+    return
+  end
+
   puts "=> You made it in #{path.size} " +
        "move#{path.size != 1 ? 's' : ''} " +
        "Here's your path:"
